@@ -1,0 +1,136 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 76px; 
+}
+
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.section-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #0d6efd;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    min-height: 90vh;
+    padding: 100px 0;
+}
+
+.hero-img {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transform: perspective(1000px) rotateY(-10deg);
+    transition: transform 0.5s;
+}
+
+.hero-img:hover {
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.service-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: rgba(13, 110, 253, 0.1);
+    border-radius: 50%;
+}
+
+.portfolio-card {
+    transition: transform 0.3s;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.portfolio-card img {
+    transition: transform 0.5s;
+    height: 250px;
+    object-fit: cover;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+}
+#contactForm .form-control {
+    border-radius: 8px;
+    padding: 12px 15px;
+    border: 1px solid #dee2e6;
+}
+
+#contactForm .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    border-color: #86b7fe;
+}
+
+footer a:hover {
+    color: #86b7fe !important;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.progress-bar {
+    animation: progress-animation 2s ease-in-out;
+}
+
+@keyframes progress-animation {
+    0% { width: 0%; }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+        padding: 80px 0;
+    }
+    
+    .hero-img {
+        margin-top: 30px;
+        transform: none;
+    }
+    
+    .hero-img:hover {
+        transform: none;
+    }
+    
+    .section-title:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
